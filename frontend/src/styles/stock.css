@@ -1,0 +1,53 @@
+/* src/styles/stock.css */
+
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stock-card {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stock-card:hover {
+  transform: translateY(-5px);
+  border-color: #c92a2a;
+}
+
+.blood-type-label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #c92a2a;
+  margin-bottom: 10px;
+}
+
+.unit-count {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.unit-count span {
+  color: #888;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+/* Stock Status Colors */
+.status-high { color: #2f9e44; }
+.status-low { color: #e03131; font-weight: 800; }
+
+.inventory-table-wrap {
+  background: white;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  overflow: hidden;
+}

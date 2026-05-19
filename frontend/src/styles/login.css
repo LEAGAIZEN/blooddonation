@@ -1,0 +1,295 @@
+/* src/styles/login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.auth-page {
+  --primary-red: #c62828;
+  --primary-red-hover: #b71c1c;
+  --bg-color: #fcf6f6;
+  --footer-bg: #f9efef;
+  --text-main: #1a1a1a;
+  --text-muted: #757575;
+  --border-light: #e0e0e0;
+
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* 1. Vertical Copy Styling */
+.vertical-copy {
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #e0d5d5;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* 2. Main Container & Logo Stack */
+.auth-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-logo-stack {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--primary-red);
+  letter-spacing: -0.5px;
+}
+
+.drop-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--primary-red);
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+
+.tagline {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* 3. Login Card - MADE BIGGER */
+.auth-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px; /* Increased from 420px */
+  padding: 50px 45px; /* Increased padding */
+  border-radius: 16px; /* Slightly softer corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.auth-card h2 {
+  font-size: 26px; /* Slightly larger text to match the bigger card */
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 8px 0;
+}
+
+.auth-card p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin: 0 0 35px 0;
+}
+
+.error-banner {
+  color: #c62828;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Input Fields - UPDATED TO BOXED STYLE */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.input-group label, 
+.label-row label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-muted); /* Softer label color based on image */
+  margin-bottom: 10px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label-row label {
+  margin-bottom: 0;
+}
+
+.forgot-btn {
+  background: none;
+  border: none;
+  color: var(--primary-red);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-btn:hover {
+  text-decoration: underline;
+}
+
+/* New Input Styles */
+.input-group input {
+  border: 1px solid var(--border-light);
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.2s ease;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding doesn't break width */
+}
+
+.input-group input::placeholder {
+  color: #adb5bd;
+}
+
+.input-group input:focus {
+  border-color: var(--primary-red); /* Red border on focus */
+  background-color: #ffffff; /* Turns white on focus */
+}
+
+.input-group input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Primary Button */
+.btn-primary {
+  width: 100%;
+  background: var(--primary-red);
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(198, 40, 40, 0.15);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--primary-red-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(198, 40, 40, 0.25);
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Switch Text (Sign Up Link) */
+.switch-text {
+  text-align: center;
+  font-size: 14px ;
+  margin: 0 ;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-light);
+}
+
+.switch-text a {
+  color: var(--primary-red);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* 4. Fixed Footer */
+.auth-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  background-color: var(--footer-bg);
+  border-top: 1px solid #f2e6e6;
+}
+
+.footer-left strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary-red);
+  margin-bottom: 4px;
+  letter-spacing: -0.5px;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s ease;
+}
+
+.footer-right a:hover {
+  color: var(--primary-red);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .vertical-copy {
+    display: none;
+  }
+  
+  .auth-card {
+    padding: 35px 25px; /* Shrink padding on mobile */
+  }
+
+  .auth-footer {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footer-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}

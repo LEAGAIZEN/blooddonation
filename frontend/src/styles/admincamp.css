@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* =========================================
+   GLOBAL CAMP LAYOUT
+   ========================================= */
+.camp-page-container {
+  padding: 40px;
+  font-family: 'Inter', sans-serif;
+  background-color: #FFF9F9;
+  min-height: 100vh;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+.camp-page-header { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-end; 
+  margin-bottom: 40px; 
+}
+.header-text .mini-label { 
+  color: #C92A2A; 
+  font-size: 11px; 
+  font-weight: 800; 
+  letter-spacing: 1px; 
+}
+.header-text h1 { 
+  font-size: 32px; 
+  font-weight: 900; 
+  margin: 8px 0; 
+  color: #1A1A1A; 
+  letter-spacing: -1px; 
+}
+.header-text p { 
+  font-size: 14px; 
+  color: #666; 
+  font-weight: 500; 
+  margin: 0; 
+  max-width: 600px; 
+  line-height: 1.5;
+}
+
+.btn-schedule-red { 
+  background: #C92A2A; 
+  color: white; 
+  border: none; 
+  padding: 14px 24px; 
+  border-radius: 8px; 
+  font-weight: 800; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  transition: 0.2s; 
+}
+.btn-schedule-red:hover { background: #A61E1E; }
+
+/* =========================================
+   TAB NAVIGATION
+   ========================================= */
+.active-schedule-bar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 24px; 
+  border-bottom: 1px solid #F5E6E6; 
+  padding-bottom: 16px; 
+}
+.active-schedule-bar h3 { 
+  margin: 0; 
+  font-size: 18px; 
+  font-weight: 900; 
+  color: #1A1A1A; 
+}
+.tab-group { display: flex; gap: 16px; }
+.tab-btn { 
+  background: none; 
+  border: none; 
+  font-size: 12px; 
+  font-weight: 800; 
+  color: #888; 
+  cursor: pointer; 
+  padding: 8px 16px; 
+  border-radius: 20px; 
+  transition: 0.2s; 
+}
+.tab-btn.active { background: #FCE8E9; color: #C92A2A; }
+.tab-btn:hover:not(.active) { color: #1A1A1A; }
+
+/* =========================================
+   MAIN GRID & CARDS
+   ========================================= */
+.camp-main-layout { 
+  display: grid; 
+  grid-template-columns: 2fr 1fr; 
+  gap: 32px; 
+}
+.camp-cards-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 16px; 
+}
+
+.camp-entry-card { 
+  background: white; 
+  border: 1px solid #F5E6E6; 
+  border-radius: 16px; 
+  padding: 24px; 
+  display: flex; 
+  gap: 24px; 
+  align-items: center; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02); 
+  transition: 0.2s; 
+}
+.camp-entry-card:hover { 
+  border-color: #FEE2E2; 
+  box-shadow: 0 10px 30px rgba(201,42,42,0.05); 
+}
+
+.date-tile { 
+  background: #FFF9F9; 
+  border: 1px solid #F5E6E6; 
+  border-radius: 12px; 
+  width: 72px; 
+  height: 72px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0; 
+}
+.d-day { font-size: 24px; font-weight: 900; color: #1A1A1A; line-height: 1; }
+.d-month { font-size: 11px; font-weight: 800; color: #C92A2A; letter-spacing: 1px; margin-top: 4px; }
+
+.camp-info-main { flex: 1; }
+.info-top-row { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+.priority-badge { 
+  background: #FFF5F5; 
+  color: #C92A2A; 
+  padding: 4px 8px; 
+  border-radius: 4px; 
+  font-size: 9px; 
+  font-weight: 900; 
+  letter-spacing: 0.5px; 
+}
+.time-text { font-size: 11px; font-weight: 800; color: #888; }
+
+.camp-info-main h3 { margin: 0 0 10px 0; font-size: 18px; font-weight: 900; color: #1A1A1A; letter-spacing: -0.5px;}
+
+.info-bottom-row { display: flex; gap: 20px; }
+.loc-item, .donor-item { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #666; }
+
+.camp-entry-actions { display: flex; gap: 8px; }
+.action-btn { 
+  background: white; 
+  border: 1px solid #E5E7EB; 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 8px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  cursor: pointer; 
+  color: #666; 
+  transition: 0.2s; 
+}
+.action-btn:hover { color: #C92A2A; border-color: #FEE2E2; background: #FFF5F5; }
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+.camp-sidebar { display: flex; flex-direction: column; gap: 24px; }
+.sidebar-card { background: white; border: 1px solid #F5E6E6; border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.02);}
+.sidebar-card h3 { margin: 0 0 20px 0; font-size: 18px; font-weight: 900; color: #1A1A1A; letter-spacing: -0.5px;}
+
+.logistics-item { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+.logistics-item:last-child { margin-bottom: 0; }
+.log-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icon-red { background: #FFF5F5; color: #C92A2A; }
+.icon-blue { background: #EFF6FF; color: #3B82F6; }
+.icon-pink { background: #FDF2F8; color: #EC4899; }
+
+.log-text strong { display: block; font-size: 13px; font-weight: 800; color: #1A1A1A; margin-bottom: 2px; }
+.log-text span { font-size: 11px; font-weight: 600; color: #888; }
+
+/* Dark Alert Banner with Background Image */
+.alert-banner { 
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80') center/cover; 
+  color: white; 
+  border: none; 
+}
+.alert-label { 
+  display: inline-block; 
+  background: #C92A2A; 
+  padding: 6px 10px; 
+  border-radius: 6px; 
+  font-size: 9px; 
+  font-weight: 900; 
+  letter-spacing: 1px; 
+  margin-bottom: 16px; 
+}
+.alert-banner h4 { margin: 0 0 8px 0; font-size: 20px; font-weight: 900; letter-spacing: -0.5px;}
+.alert-banner p { margin: 0; font-size: 13px; font-weight: 500; opacity: 0.9; line-height: 1.5; }
+
+/* =========================================
+   MODAL OVERLAY & FORM
+   ========================================= */
+.modal-overlay { 
+  position: fixed; 
+  top: 0; left: 0; right: 0; bottom: 0; 
+  background: rgba(0,0,0,0.6); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 10000; 
+  backdrop-filter: blur(4px); 
+}
+.modal-content { 
+  background: white; 
+  width: 450px; 
+  padding: 32px; 
+  border-radius: 16px; 
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15); 
+  animation: slideUp 0.3s ease; 
+}
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.modal-header h2 { font-size: 22px; font-weight: 900; margin: 0; color: #1A1A1A; }
+.close-x { background: none; border: none; cursor: pointer; color: #888; transition: 0.2s; padding: 0; }
+.close-x:hover { color: #1A1A1A; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 12px; font-weight: 800; margin-bottom: 8px; color: #1A1A1A; }
+.form-group input { 
+  width: 100%; 
+  padding: 14px; 
+  border: 1px solid #E5E7EB; 
+  border-radius: 8px; 
+  font-family: inherit; 
+  font-size: 14px; 
+  font-weight: 500; 
+  box-sizing: border-box; 
+  outline: none; 
+  transition: 0.2s; 
+}
+.form-group input:focus { border-color: #C92A2A; }
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

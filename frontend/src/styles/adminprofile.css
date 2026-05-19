@@ -1,0 +1,162 @@
+.admin-profile-container {
+    padding-top: 1rem;
+}
+
+.profile-header-section {
+    margin-bottom: 3rem;
+}
+
+.profile-header-section h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.profile-header-section p {
+    color: #666;
+    max-width: 500px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.admin-profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* IDENTITY CARD */
+.profile-identity-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.profile-avatar-navy {
+    width: 100px;
+    height: 100px;
+    background-color: #0D1B2A;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 900;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.identity-meta h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0 0 0.5rem 0;
+}
+
+.admin-status-pill {
+    background-color: #FDF2F2;
+    color: #C92A2A;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.identity-stats {
+    display: flex;
+    width: 100%;
+    margin-top: 2.5rem;
+    justify-content: space-around;
+    padding-top: 1.5rem;
+    border-top: 1px solid #F5F5F5;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-val { font-weight: 800; color: #1A1A1A; }
+.stat-lbl { font-size: 0.7rem; font-weight: 700; color: #A8A2A2; text-transform: uppercase; }
+
+/* DETAILS CARD */
+.profile-details-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+}
+
+.profile-details-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0 0 2rem 0;
+}
+
+.admin-input-group {
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.admin-input-group label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #A8A2A2;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.admin-input-group input {
+    width: 100%;
+    padding: 1rem;
+    background-color: #FCF5F5;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 600;
+    color: #1A1A1A;
+    outline: none;
+}
+
+.admin-input-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.admin-form-actions {
+    margin-top: 2rem;
+    display: flex;
+}
+
+.btn-update-profile-final {
+    background-color: #C92A2A; /* Your DonorHub primary red */
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(201, 42, 42, 0.2);
+}
+
+.btn-secondary-outline {
+    background: transparent;
+    border: 1px solid #EEE;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    color: #666;
+}

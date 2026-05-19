@@ -1,0 +1,98 @@
+/* Shared layout wrappers for all admin pages */
+.ui-page {
+  padding: 2rem 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Common Page Header Block (Title + Button) */
+.split-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.page-title-block h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: -1px;
+  margin: 0.5rem 0;
+  color: var(--dh-text-main);
+}
+
+.page-title-block p {
+  color: var(--dh-text-muted);
+  font-size: 1rem;
+  margin: 0;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+.mini-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.mini-title.accent {
+  color: var(--dh-primary);
+}
+
+/* Common Buttons */
+.btn.primary {
+  background-color: var(--dh-primary);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn.primary:hover {
+  background-color: var(--dh-primary-hover);
+}
+
+.btn.smallish {
+  padding: 0.8rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn.soft {
+  background-color: #F3E6E8;
+  color: var(--dh-primary);
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.modal-content h3 { margin-top: 0; }

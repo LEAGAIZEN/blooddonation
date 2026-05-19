@@ -1,0 +1,403 @@
+/* Import matching UI Font (Inter) - Ensure weights 800/900 are loaded */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ==================== GLOBAL WRAPPER ==================== */
+body .public-page-wrapper {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100vh !important;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  background-color: #FCF5F5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* ==================== THE WAVY BACKGROUND ==================== */
+/* Simulates the complex swooping background from the UI design */
+body .public-page-wrapper .hero-background-wrapper { 
+  background-color: #FDF5F5 !important; 
+  background-image: 
+    radial-gradient(120% 120% at 0% 0%, rgba(255,255,255,0.8) 0%, transparent 40%),
+    radial-gradient(150% 100% at 100% 0%, rgba(250, 232, 233, 0.7) 0%, transparent 50%),
+    radial-gradient(100% 100% at 50% 100%, rgba(255,255,255,0.9) 0%, transparent 60%) !important;
+  overflow: hidden;
+} 
+
+body .public-page-wrapper .features-background-wrapper { background-color: #FFFFFF !important; } 
+body .public-page-wrapper .testimonial-background-wrapper { background-color: #FDF5F5 !important; } 
+
+/* LOCKING MAX WIDTH TO 1150px (Matches the tight center column of the UI) */
+body .public-page-wrapper .site-nav, 
+body .public-page-wrapper .hero-section, 
+body .public-page-wrapper .features-grid, 
+body .public-page-wrapper .testimonial-section, 
+body .public-page-wrapper .public-footer {
+  padding-left: max(6%, calc((100vw - 1150px) / 2)) !important;
+  padding-right: max(6%, calc((100vw - 1150px) / 2)) !important;
+  box-sizing: border-box !important;
+}
+
+/* ==================== NAVBAR ==================== */
+body .public-page-wrapper .site-nav {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+  background: transparent !important;
+  width: 100% !important;
+  border-bottom: 1px solid #F6EDED !important; /* <--- ADDED THE BORDER LINE HERE */
+}
+
+body .public-page-wrapper .site-nav .brand {
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  color: #C92A2A !important;
+  text-decoration: none !important;
+  letter-spacing: -1px !important;
+  text-transform: uppercase !important;
+  margin: 0 !important;
+}
+
+body .public-page-wrapper .site-nav .desktop-links {
+  display: flex !important;
+  gap: 3rem !important;
+  margin: 0 !important;
+}
+
+body .public-page-wrapper .site-nav .desktop-links a {
+  text-decoration: none !important;
+  color: #1A1A1A !important;
+  font-weight: 600 !important; 
+  font-size: 15px !important;
+  padding-bottom: 6px !important;
+  border-bottom: 2px solid transparent !important;
+  transition: all 0.2s !important;
+}
+
+body .public-page-wrapper .site-nav .desktop-links a:hover, 
+body .public-page-wrapper .site-nav .desktop-links a.active { 
+  color: #C92A2A !important; 
+  border-bottom: 2px solid #C92A2A !important; 
+}
+
+body .public-page-wrapper .site-nav .nav-right {
+  display: flex !important;
+  align-items: center !important;
+  gap: 1.5rem !important;
+}
+
+body .public-page-wrapper .site-nav .icon-btn, 
+body .public-page-wrapper .site-nav .menu-trigger {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important; 
+}
+
+/* ==================== DROPDOWNS ==================== */
+body .public-page-wrapper .nav-dropdown, 
+body .public-page-wrapper .profile-dropdown {
+  position: absolute !important;
+  top: 45px !important;
+  right: 0 !important;
+  background: #FFFFFF !important;
+  width: 220px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  z-index: 9999 !important;
+  border: 1px solid #E5E7EB !important;
+}
+
+body .public-page-wrapper .dropdown-link, 
+body .public-page-wrapper .nav-dropdown a { 
+  padding: 14px 18px !important; 
+  text-decoration: none !important; 
+  color: #1A1A1A !important; 
+  font-weight: 600 !important; 
+  font-size: 14px !important; 
+  display: block !important;
+  transition: background 0.2s !important;
+}
+
+body .public-page-wrapper .dropdown-link:hover, 
+body .public-page-wrapper .nav-dropdown a:hover { 
+  background: #FDF2F2 !important; 
+  color: #C92A2A !important; 
+}
+
+body .public-page-wrapper .menu-divider { 
+  height: 1px !important; 
+  background: #E5E7EB !important; 
+  width: 100% !important; 
+  margin: 0 !important; 
+}
+
+/* ==================== HERO SECTION ==================== */
+body .public-page-wrapper .hero-section {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  padding-top: 3rem !important;
+  padding-bottom: 6rem !important;
+  align-items: center !important;
+  gap: 3rem !important; 
+}
+
+body .public-page-wrapper .eyebrow-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: #FCE8E9 !important;
+  color: #C92A2A !important;
+  padding: 6px 12px !important;
+  border-radius: 20px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1px !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* CRITICAL: MASSIVE, TIGHT TYPOGRAPHY OVERRIDE */
+body .public-page-wrapper .hero-content h1 {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 6rem !important; /* Huge text */
+  font-weight: 900 !important; /* Maximum thickness */
+  line-height: 0.85 !important; /* Forces the lines to aggressively stack */
+  color: #1A1A1A !important;
+  margin: 0 0 2rem 0 !important;
+  letter-spacing: -3.5px !important; /* Squeezes letters together */
+  padding: 0 !important;
+}
+
+body .public-page-wrapper .text-red { 
+  color: #C92A2A !important; 
+}
+
+body .public-page-wrapper .hero-content p {
+  color: #555 !important;
+  font-size: 1.1rem !important;
+  line-height: 1.6 !important;
+  max-width: 440px !important;
+  margin: 0 0 2.5rem 0 !important;
+  font-weight: 500 !important;
+}
+
+/* CRITICAL: BULLETPROOF BUTTON ALIGNMENT */
+body .public-page-wrapper .hero-buttons { 
+  display: flex !important; 
+  flex-direction: row !important;
+  align-items: center !important; /* Centers them horizontally */
+  justify-content: flex-start !important; 
+  gap: 16px !important; 
+  height: 56px !important; /* Hard lock on container height */
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body .public-page-wrapper .btn-primary, 
+body .public-page-wrapper .btn-soft {
+  display: inline-flex !important; 
+  align-items: center !important; 
+  justify-content: center !important;
+  height: 56px !important; /* Forces absolute exact height */
+  padding: 0 32px !important; 
+  border-radius: 8px !important; 
+  font-weight: 800 !important;
+  font-size: 16px !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  box-sizing: border-box !important;
+  margin: 0 !important; 
+  line-height: 1 !important; 
+  border: none !important;
+}
+
+body .public-page-wrapper .btn-primary { 
+  background-color: #C92A2A !important; 
+  color: white !important; 
+  gap: 8px !important; 
+}
+
+body .public-page-wrapper .btn-soft { 
+  background-color: #FCE8E9 !important; 
+  color: #C92A2A !important; 
+}
+
+/* ==================== HERO IMAGE ==================== */
+body .public-page-wrapper .hero-visual { position: relative !important; }
+
+body .public-page-wrapper .image-frame {
+  background: white !important;
+  padding: 16px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.06) !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 500px !important; 
+  margin-left: auto !important; 
+}
+
+body .public-page-wrapper .hero-img {
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important; 
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  display: block !important;
+}
+
+body .public-page-wrapper .floating-stat {
+  position: absolute !important;
+  bottom: -24px !important;
+  left: -32px !important;
+  background: white !important;
+  padding: 16px 24px !important;
+  border-radius: 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.1) !important;
+}
+
+body .public-page-wrapper .heart-box {
+  background: #FDF2F2 !important; 
+  width: 44px !important; 
+  height: 44px !important; 
+  border-radius: 10px !important;
+  display: flex !important; 
+  align-items: center !important; 
+  justify-content: center !important;
+}
+
+body .public-page-wrapper .stat-info strong { 
+  display: block !important; 
+  font-size: 24px !important; 
+  font-weight: 900 !important; 
+  color: #1A1A1A !important; 
+  line-height: 1.1 !important; 
+  letter-spacing: -0.5px !important; 
+}
+
+body .public-page-wrapper .stat-info span { 
+  font-size: 10px !important; 
+  font-weight: 800 !important; 
+  color: #A8A2A2 !important; 
+  letter-spacing: 0.5px !important; 
+}
+
+/* ==================== FEATURE GRID ==================== */
+body .public-page-wrapper .features-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 2rem !important;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+}
+
+body .public-page-wrapper .feature-card {
+  padding: 3rem 2.5rem !important;
+  border-radius: 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+body .public-page-wrapper .soft-pink-card { background-color: #FFF6F6 !important; }
+body .public-page-wrapper .solid-white-card { 
+  background-color: white !important; 
+  box-shadow: 0 16px 48px rgba(0,0,0,0.04) !important; 
+  border: 1px solid #F5F5F5 !important; 
+}
+
+body .public-page-wrapper .feat-icon { margin-bottom: 1.5rem !important; }
+body .public-page-wrapper .red-icon { color: #C92A2A !important; }
+body .public-page-wrapper .blue-icon { color: #3B82F6 !important; }
+
+body .public-page-wrapper .feature-card h3 { 
+  font-size: 1.4rem !important; 
+  font-weight: 900 !important; 
+  margin: 0 0 1rem 0 !important; 
+  color: #1A1A1A !important; 
+  letter-spacing: -0.5px !important;
+}
+
+body .public-page-wrapper .feature-card p { 
+  color: #666 !important; 
+  font-size: 0.95rem !important; 
+  line-height: 1.6 !important; 
+  margin-bottom: 2.5rem !important; 
+  flex: 1 !important; 
+}
+
+body .public-page-wrapper .feat-link { 
+  display: flex !important; 
+  align-items: center !important; 
+  gap: 6px !important; 
+  font-weight: 800 !important; 
+  font-size: 0.9rem !important; 
+  text-decoration: none !important; 
+}
+body .public-page-wrapper .link-red { color: #C92A2A !important; }
+body .public-page-wrapper .link-blue { color: #3B82F6 !important; }
+
+/* ==================== TESTIMONIAL ==================== */
+body .public-page-wrapper .testimonial-section {
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+body .public-page-wrapper .testimonial-card {
+  background: white !important;
+  padding: 4rem !important;
+  border-radius: 16px !important;
+  max-width: 800px !important;
+  width: 100% !important;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.05) !important;
+  position: relative !important;
+}
+
+body .public-page-wrapper .stars { display: flex !important; gap: 4px !important; margin-bottom: 1.5rem !important; }
+body .public-page-wrapper .quote-text { 
+  font-size: 1.35rem !important; 
+  font-weight: 700 !important; 
+  font-style: italic !important; 
+  color: #1A1A1A !important; 
+  line-height: 1.6 !important; 
+  margin: 0 0 2.5rem 0 !important; 
+}
+
+body .public-page-wrapper .author-row { display: flex !important; align-items: center !important; gap: 1rem !important; }
+body .public-page-wrapper .author-avatar {
+  width: 50px !important; height: 50px !important; background: #E5E7EB !important; border-radius: 10px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important; font-weight: 800 !important; color: #666 !important; font-size: 1.1rem !important;
+}
+body .public-page-wrapper .author-details strong { display: block !important; font-size: 1.1rem !important; font-weight: 800 !important; color: #1A1A1A !important; }
+body .public-page-wrapper .author-details span { font-size: 10px !important; font-weight: 800 !important; color: #A8A2A2 !important; letter-spacing: 0.5px !important; }
+
+body .public-page-wrapper .quote-mark { position: absolute !important; top: 2rem !important; right: 3rem !important; font-size: 5rem !important; color: #FCF5F5 !important; font-family: serif !important; line-height: 1 !important; }
+
+/* ==================== FOOTER ==================== */
+body .public-page-wrapper .public-footer {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-top: 1px solid #F6EDED !important; 
+  background-color: #FCF5F5 !important; 
+}
+
+body .public-page-wrapper .footer-logo { font-size: 18px !important; font-weight: 900 !important; color: #C92A2A !important; display: block !important; margin: 0 0 5px 0 !important; text-transform: uppercase !important; letter-spacing: -0.5px !important; }
+body .public-page-wrapper .footer-left p { font-size: 10px !important; font-weight: 700 !important; color: #A8A2A2 !important; letter-spacing: 0.5px !important; margin: 0 !important; }
+
+body .public-page-wrapper .footer-right { display: flex !important; gap: 1.5rem !important; }
+body .public-page-wrapper .footer-right a { font-size: 11px !important; font-weight: 800 !important; color: #888 !important; text-decoration: none !important; letter-spacing: 0.5px !important; }
+body .public-page-wrapper .footer-right a:hover { color: #C92A2A !important; }

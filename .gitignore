@@ -1,0 +1,28 @@
+# Virtual environments (Python)
+venv/
+venv_win/
+.venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+
+# Node dependencies (Frontend)
+**/node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Environment variables & secrets (CRITICAL)
+.env
+.env.local
+.env.*.local
+
+# Databases
+*.db
+*.sqlite3
+
+# OS / System Files
+.DS_Store
+Thumbs.db
+*.log

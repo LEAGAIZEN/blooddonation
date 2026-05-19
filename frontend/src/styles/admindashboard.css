@@ -1,0 +1,274 @@
+/* ==================== DASHBOARD HEADER ==================== */
+.admin-page-header {
+  margin-bottom: 2rem;
+}
+
+.admin-page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -1px;
+}
+
+.admin-page-header p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ==================== INVENTORY GRID ==================== */
+.admin-inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.admin-stock-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid var(--border-light);
+  border-top: 4px solid var(--primary-red);
+  position: relative;
+}
+
+.admin-stock-card.border-critical {
+  border: 1px solid var(--primary-red);
+  border-top: 4px solid var(--primary-red);
+  background-color: #FFF8F8; /* Slight red tint for critical */
+}
+
+.stock-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.blood-type-txt {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--primary-red);
+}
+
+.status-chip {
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.status-chip.low-stock { background-color: var(--primary-red); color: white; }
+.status-chip.normal { background-color: #FCE8E9; color: var(--primary-red); }
+.status-chip.stable { background-color: #F5E8E8; color: var(--text-muted); }
+
+.stock-card-middle {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.units-count-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.units-label-text {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.stock-progress-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #F0E5E5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stock-progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.8s ease-out;
+}
+
+.stock-progress-bar-fill.low-stock { background-color: var(--primary-red); }
+.stock-progress-bar-fill.normal { background-color: #DDA2A2; }
+.stock-progress-bar-fill.stable { background-color: #A34D4D; }
+
+.critical-warning-msg {
+  margin-top: 1rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  letter-spacing: 0.5px;
+}
+
+/* ==================== CAMP BANNER ==================== */
+.admin-camp-banner {
+  background-color: var(--primary-red);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 10px 20px rgba(201, 42, 42, 0.15);
+}
+
+.banner-left-content h2 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+}
+
+.banner-left-content p {
+  color: #FCE8E9;
+  font-size: 0.9rem;
+  margin: 0;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.schedule-camp-btn {
+  background-color: white;
+  color: var(--primary-red);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.schedule-camp-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ==================== TABLE ==================== */
+.admin-table-card {
+  background: transparent;
+}
+
+.table-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.table-card-header h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.manage-users-btn {
+  background-color: #E4D8D8;
+  color: var(--primary-red);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s;
+}
+.manage-users-btn:hover { opacity: 0.8; }
+
+.table-header-row {
+  display: flex;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-light);
+  margin-bottom: 0.5rem;
+}
+
+.col-header {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.table-body-row {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: transparent;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.flex-1 { flex: 1; }
+.flex-2 { flex: 2; }
+.text-right { text-align: right; }
+
+.name-profile-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar-initials {
+  width: 40px;
+  height: 40px;
+  background-color: #FCE8E9;
+  color: var(--primary-red);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.user-profile-name {
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 2px;
+  font-size: 0.9rem;
+}
+
+.user-profile-email {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.blood-badge-chip {
+  background-color: var(--primary-red);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.col-cell {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.status-text-display {
+  font-weight: 800;
+  font-size: 0.75rem;
+  color: var(--text-main);
+}
+
+.active-dot {
+  color: #0E8750; /* Green dot from design */
+  margin-right: 6px;
+  font-size: 1rem;
+}

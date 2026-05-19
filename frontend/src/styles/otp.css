@@ -1,0 +1,231 @@
+/* ==========================================================================
+   1. PAGE ROOT & CANVAS
+   ========================================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+}
+.ui-page.auth-page.otp-bg {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #FFF5F5;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box; 
+}
+/* ==========================================================================
+   2. HEADER (BRANDING ONLY)
+   ========================================================================== */
+.ui-page.auth-page.otp-bg .site-nav.public-nav {
+  width: 100%;
+  padding: 40px 0 20px 0;
+  display: flex;
+  justify-content: center; /* Centers the DONORHUB logo */
+  background: transparent;
+}
+
+.ui-page.auth-page.otp-bg .brand {
+  font-size: 26px;
+  font-weight: 900;
+  color: #B82323;
+  text-decoration: none;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.otp-header {
+  width: 100%;
+  padding: 40px 0 20px 0;
+  display: flex;
+  justify-content: center; /* Center "DONORHUB" at top */
+}
+
+.otp-header .brand {
+  font-size: 26px;
+  font-weight: 900;
+  color: #B82323;
+  letter-spacing: -1px;
+}
+
+/* Hide desktop links, notifications, or hamburger menus on this specific page */
+.ui-page.auth-page.otp-bg .desktop-links,
+.ui-page.auth-page.otp-bg .nav-right,
+.ui-page.auth-page.otp-bg .menu-trigger,
+.ui-page.auth-page.otp-bg .icon-btn {
+  display: none !important;
+}
+
+/* ==========================================================================
+   3. AUTH CARD PANEL
+   ========================================================================== */
+.otp-main-content {
+  flex: 1; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center; 
+  width: 100%;
+  padding: 20px;
+  /* This lifts the card up visually without breaking the header! */
+  padding-bottom: 8vh; 
+  box-sizing: border-box; 
+}
+.auth-card.otp-card {
+  background: #ffffff;
+  padding: 50px 45px;
+  border-radius: 16px;
+  max-width: 460px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+  margin: 0 auto; /* Reset to safe horizontal centering */
+}
+/* Shield Icon Frame */
+.otp-icon-box {
+  background-color: #FFEAEA;
+  color: #B82323;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px auto;
+}
+
+.auth-card.otp-card h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.auth-card.otp-card p {
+  font-size: 14px;
+  color: #615555;
+  margin: 0 0 30px 0;
+}
+
+/* ==========================================================================
+   4. OTP INPUT FIELDS GRID
+   ========================================================================== */
+.auth-card.otp-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 35px;
+}
+
+/* OTP INPUT FIELDS */
+.otp-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.otp-input {
+  width: 48px;
+  height: 52px;
+  background-color: #FFF0F0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2D2424;
+  transition: all 0.2s ease;
+}
+
+.otp-input:focus {
+  outline: none;
+  border: 2px solid #B82323;
+  background-color: #ffffff;
+}
+
+/* Inline Form Error Display Rules */
+.form-error-msg {
+  color: #b51010;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+/* ==========================================================================
+   5. INTERACTION ACTIONS
+   ========================================================================== */
+.btn.primary.block {
+  width: 100%;
+  background-color: #B82323;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.resend-section .switch-copy {
+  font-size: 14px;
+  color: #615555;
+  margin: 0 0 8px 0;
+}
+
+.resend-link {
+  background: none;
+  border: none;
+  color: #B82323;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.resend-link:disabled {
+  color: #A39696;
+  cursor: not-allowed;
+}
+
+.secure-note {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #A39696;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.8px;
+  margin-bottom: 30px; /* Increased from 20px to give it more breathing room */
+  text-transform: uppercase;
+}
+
+.footer-shell.auth-footer {
+  width: 100%;
+  padding: 30px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF5F5;
+  border-top: 1px solid #FFEAEA;
+}
+
+.footer-shell.auth-footer .footer-brand .brand {
+  font-size: 16px;
+  font-weight: bold;
+  color: #B82323;
+}
+.footer-brand .brand {
+  font-weight: 800;
+  color: #B82323;
+  font-size: 14px;
+}
+
+.footer-shell.auth-footer .footer-brand p {
+  font-size: 11px;
+  color: #A39696;
+  margin: 5px 0 0 0;
+  font-weight: bold;
+}

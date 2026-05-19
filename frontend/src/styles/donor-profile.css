@@ -1,0 +1,408 @@
+/* --- Base Page Layout --- */
+.dp-page-wrapper {
+  background-color: #FFFAFA; /* Soft off-white pink background */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.dp-main-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+/* --- Header Section --- */
+.dp-page-header {
+  margin-bottom: 30px;
+}
+
+.dp-page-header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.dp-page-header p {
+  font-size: 15px;
+  color: #4B5563;
+  margin: 0;
+}
+
+/* --- Main Split Layout --- */
+.dp-content-split {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* --- Left Sidebar Card --- */
+.dp-sidebar-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dp-avatar-section {
+  margin-bottom: 30px;
+}
+
+.dp-avatar-ring {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 16px auto;
+  border-radius: 20px;
+  padding: 4px;
+  background: linear-gradient(135deg, #FCA5A5, #FECACA);
+}
+
+.dp-avatar-ring img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 3px solid #FFFFFF;
+}
+
+.dp-edit-avatar-btn {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  background-color: #DC2626;
+  color: white;
+  border: 2px solid #FFFFFF;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.dp-user-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 6px 0;
+}
+
+.dp-user-role {
+  font-size: 11px;
+  font-weight: 800;
+  color: #DC2626;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.dp-contribution-box {
+  background-color: #FFF5F5;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.dp-stat-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: #9CA3AF;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.dp-stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.dp-stat-value span {
+  font-size: 16px;
+}
+
+/* --- Right Main Form Card --- */
+.dp-form-card {
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.dp-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 24px;
+  margin-bottom: 30px;
+}
+
+.dp-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dp-input-group label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #6B7280;
+  letter-spacing: 0.5px;
+}
+
+.dp-input-group input, 
+.dp-input-group select {
+  background-color: #FFF5F5; /* Matches the light pink input style from image */
+  border: none;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 14px;
+  color: #111827;
+  font-weight: 500;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- Eligibility Progress Box --- */
+.dp-eligibility-box {
+  background-color: #FFF5F5;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.dp-eligibility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.dp-dark-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #4B5563;
+  letter-spacing: 0.5px;
+}
+
+.dp-red-date {
+  font-size: 14px;
+  font-weight: 800;
+  color: #B82323;
+}
+
+.dp-progress-track {
+  width: 100%;
+  height: 8px;
+  background-color: #FEE2E2;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.dp-progress-fill {
+  height: 100%;
+  background-color: #DC2626;
+  border-radius: 4px;
+}
+
+.dp-eligibility-subtext {
+  font-size: 12px;
+  color: #6B7280;
+  font-style: italic;
+  margin: 0;
+}
+
+/* --- Update Button --- */
+.dp-form-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dp-update-btn {
+  background-color: #B82323;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+}
+
+.dp-update-btn:hover {
+  background-color: #991B1B;
+}
+
+/* --- Bottom Stats Row --- */
+.dp-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.dp-stat-block {
+  background-color: #FFF5F5;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dp-stat-icon {
+  font-size: 20px;
+  color: #DC2626;
+  margin-bottom: 12px;
+}
+
+.dp-block-label {
+  font-size: 10px;
+  font-weight: 800;
+  color: #6B7280;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.dp-block-value {
+  font-size: 22px;
+  font-weight: 900;
+  color: #111827;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .dp-content-split {
+    grid-template-columns: 1fr;
+  }
+  .dp-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .dp-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .dp-stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Custom Header Wrapper */
+.dp-custom-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 0 20px;
+  border-bottom: 1px solid #F3F4F6;
+}
+
+/* Mini Top-Right Profile Control Zone */
+.dp-header-profile-zone {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.dp-mini-avatar-trigger {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.dp-mini-img, .dp-mini-placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dp-mini-placeholder {
+  background-color: #B82323;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.dp-dropdown-arrow {
+  font-size: 10px;
+  color: #6B7280;
+}
+
+/* Dropdown Card Options Wrapper */
+.dp-profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  width: 140px;
+  overflow: hidden;
+}
+
+.dp-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  text-align: left;
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #374151;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dp-dropdown-item:hover {
+  background-color: #FFF5F5;
+}
+
+.dp-logout-btn {
+  color: #DC2626;
+  border-top: 1px solid #E5E7EB;
+}
+
+/* Initials Avatar fallback for Main Sidebar Box */
+.dp-avatar-initials-fallback {
+  width: 100%;
+  height: 100%;
+  background-color: #B82323;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: 800;
+  border-radius: 16px;
+  border: 3px solid #FFFFFF;
+}

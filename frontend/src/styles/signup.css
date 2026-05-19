@@ -1,0 +1,237 @@
+/* src/styles/signup.css */
+
+.auth-page {
+  --primary-red: #c62828;
+  --bg-color: #fcf6f6;
+  --input-pink-bg: #fbe4e2; 
+  --text-main: #1a1a1a;
+  --text-muted: #757575;
+  --footer-bg: #f9efef;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  padding-top: 60px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* 1. Signup Card (Wide Version) */
+.auth-card.wide {
+  background: #ffffff;
+  width: 100%;
+  max-width: 720px;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary-red);
+  letter-spacing: -0.5px;
+}
+
+.auth-title {
+  text-align: left;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  text-align: left;
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* 2. Form Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 30px;
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+/* UPDATED ERROR BANNER STYLING */
+.error-text {
+
+  color: #c41717;          
+  border-radius: 8px;        /* Rounded corners */
+  font-size: 15px;
+  font-weight: 100px;
+  text-align: left;        /* Centered text as per design */
+  margin-bottom: 25px;       /* Spacing before the form starts */
+  width: 50%;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* UPDATED PINK BOX STYLING - UNIFIED FOR INPUT AND SELECT */
+.input-group input, 
+.input-group select {
+  background-color: var(--input-pink-bg) !important;
+  border: 1px solid rgba(198, 40, 40, 0.1);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #8c7d7c;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  
+  /* Standardizes appearance across browsers */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* Adds custom SVG arrow */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238c7d7c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center; /* Positions arrow on the right */
+  background-size: 14px;
+  padding-right: 40px; /* Space for the arrow */
+  transition: all 0.2s ease;
+}
+/* Input placeholder color */
+.input-group input::placeholder {
+  color: #8c7d7c;
+  opacity: 1;
+}
+
+/* Change text to dark only when typing or selecting a value */
+.input-group input:focus,
+.input-group select:focus,
+.input-group input:not(:placeholder-shown) {
+  color: var(--text-main);
+  background-color: #fff; /* Shifts to white on focus for contrast */
+  border: 1px solid var(--primary-red);
+}
+
+/* Specific fix for select text color when an option is picked */
+.input-group select:valid {
+  color: var(--text-main);
+}
+
+/* 3. Signup Button */
+.signup-btn {
+  width: 100%;
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 40px;
+  letter-spacing: 1px;
+}
+
+.switch-text {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.switch-text a {
+  color: var(--primary-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 4. Badge Strip */
+.badge-strip {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.badge-item {
+  background-color: #fdf0ef;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 5. Footer */
+.auth-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  background-color: var(--footer-bg);
+  margin-top: auto;
+}
+
+.footer-logo {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--primary-red);
+}
+
+.footer-left p {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.footer-right {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-right a {
+  font-size: 11px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .auth-card.wide {
+    padding: 30px 20px;
+    width: 90%;
+  }
+  .auth-footer {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 20px;
+  }
+}
