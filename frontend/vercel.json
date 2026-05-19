@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/(login|signup|request|inventory|donor|eligibility|admin|donations|auth|send-otp|verify-otp|forgot-password|users|camps|geo|chat|api)(.*)",
-      "destination": "https://YOUR_RENDER_BACKEND_URL/$1$2"
+      "destination": "https://blooddonation-8epp.onrender.com/$1$2"
     }
   ]
 }
