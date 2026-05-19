@@ -3,6 +3,10 @@
     {
       "source": "/(login|signup|request|inventory|donor|eligibility|admin|donations|auth|send-otp|verify-otp|forgot-password|users|camps|geo|chat|api)(.*)",
       "destination": "https://blooddonation-8epp.onrender.com/$1$2"
+    },
+    {
+      "source": "/[^.]*",
+      "destination": "/index.html"
     }
   ]
 }
