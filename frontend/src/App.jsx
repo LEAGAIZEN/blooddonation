@@ -9,7 +9,7 @@ import Request from "./pages/Request";
 import DonorDashboard from "./pages/DonorDashboard";
 import DonorProfile from "./pages/DonorProfile";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Chatbot from "./components/ChatBot"; // Fixed: matched actual filename casing
+import Settings from "./pages/Settings";
 
 // Admin Page Imports
 import AdminDashboard from "./pages/AdminDashboard";
@@ -37,7 +37,7 @@ export default function App() {
         <Route path="/request" element={<ProtectedRoute><Request /></ProtectedRoute>} />
         <Route path="/dashboard" element={<ProtectedRoute><DonorDashboard /></ProtectedRoute>} />
         <Route path="/profile" element={<ProtectedRoute><DonorProfile /></ProtectedRoute>} />
-        <Route path="/settings" element={<ProtectedRoute><DonorProfile /></ProtectedRoute>} />
+        <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
 
         {/* PROTECTED ADMIN ROUTES */}
         <Route path="/admin" element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
