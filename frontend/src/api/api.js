@@ -2,7 +2,7 @@ import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
 const API = axios.create({
-  baseURL: "", 
+  baseURL: import.meta.env.PROD ? "https://blooddonation-8epp.onrender.com" : "", 
 });
 
 // --- START MOCK SECTION (Delete/Comment this when backend is ready) ---
