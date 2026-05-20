@@ -55,7 +55,7 @@ export default function PublicNav({ active }) {
               </div>
               <div className="menu-divider"></div>
               <Link to="/dashboard" className="dropdown-link">Dashboard</Link>
-              <Link to="/settings" className="dropdown-link">Settings</Link>
+              <button className="dropdown-link" onClick={() => navigate('/settings', { replace: true })}>Settings</button>
               <div className="menu-divider"></div>
               <button onClick={handleLogout} className="dropdown-link text-red">Logout</button>
             </div>
