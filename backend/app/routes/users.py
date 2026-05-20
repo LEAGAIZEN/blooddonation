@@ -133,7 +133,11 @@ def login_bridge(data: LoginPayload, db: Session = Depends(get_db)):
     if not email:
         raise HTTPException(status_code=400, detail="Username/email is required")
 
-    user = db.query(User).filter(User.email == email).first()
+    user = db.query(User).filter(
+        (User.email == email) | 
+        (User.full_name == email) | 
+        (User.phone == email)
+    ).first()
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 

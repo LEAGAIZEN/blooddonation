@@ -72,10 +72,10 @@ export default function Login() {
           {errorMessage && <div className="error-banner">{errorMessage}</div>}
 
           <div className="input-group">
-            <label>USERNAME</label>
+            <label>EMAIL OR USERNAME</label>
             <input
               type="text"
-              placeholder="Enter your username"
+              placeholder="Enter your email or username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               disabled={isLoading}
